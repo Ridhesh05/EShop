@@ -1,0 +1,14 @@
+body{
+    background-color: black;
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+}
+.card {
+    margin-bottom: 20px;
+    gap: 10px;
+    margin-right: 5px;
+    
+}

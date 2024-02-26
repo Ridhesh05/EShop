@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+        }
+
+        .container {
+            padding-top: 50px;
+        }
+
+        .product-details {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.1);
+        }
+
+        .product-details img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.1);
+        }
+        .product-details img:hover {
+            transform: scale(1.1);
+        }
+
+        .product-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            font-size: 20px;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .product-description {
+            font-size: 16px;
+            color: #ccc;
+        }
+    </style>
+    <title>Product Details</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="product-details">
+                    <img src="{{ product_object.image }}">
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="product-details">
+                    <div class="product-title">{{ product_object.title }}</div>
+                    <div class="product-price" style="text-decoration: line-through;">$ {{ product_object.price }}</div>
+                    <div class="product-discount-price">$ {{ product_object.discount_price }}</div>
+                    <div class="product-description">{{ product_object.description }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
